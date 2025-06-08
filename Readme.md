@@ -149,7 +149,7 @@ You can test the API in a few ways:
         }
        ~~~
 
-       Risk
+       Sentiment
        ~~~
         {
             "inputs": {
@@ -164,7 +164,7 @@ You can test the API in a few ways:
         }
        ~~~
 
-       Risk
+       Assist
        ~~~
         {
             "inputs": {
