@@ -72,15 +72,113 @@ You can test the API in a few ways:
        
        Momentum Dashboard
        ~~~
+        {
+            "inputs": {
+                "action": [
+                "dashboard"
+                ]
+            },
+            "params": {}
+        }
        ~~~
 
        Stock Strategy
        ~~~
+        {
+            "inputs": {
+                "action": [
+                "strategy"
+                ],
+                "company_name": [
+                "AAPL"
+                ],
+                "timeframe": [
+                "intraday"
+                ]
+            
+            },
+            "params": {}
+        }
        ~~~
 
        Stock Research
        ~~~
+        {
+            "inputs": {
+                "action": [
+                "research"
+                ],
+                "company_name": [
+                "AAPL"
+                ],
+            "lookback": [
+                30
+                ]
+            },
+            "params": {}
+        }
        ~~~
+
+       News
+       ~~~
+        {
+            "inputs": {
+                "action": [
+                "news"
+                ],
+                "company_name": [
+                "AAPL"
+                ]
+            },
+            "params": {}
+        }
+       ~~~
+
+       Risk
+       ~~~
+        {
+            "inputs": {
+                "action": [
+                "risk"
+                ],
+                "stock_name": [
+                "AAPL"
+                ]
+            },
+            "params": {}
+        }
+       ~~~
+
+       Risk
+       ~~~
+        {
+            "inputs": {
+                "action": [
+                "sentiment"
+                ],
+                "stock_name": [
+                "AAPL"
+                ]
+            },
+            "params": {}
+        }
+       ~~~
+
+       Risk
+       ~~~
+        {
+            "inputs": {
+                "action": [
+                "assist"
+                ],
+                "question": [
+                ""Short summary of AAPL earning call"
+                ]
+            },
+            "params": {}
+        }
+       ~~~
+
 
     
 -   **Command-line Test Script**: The `main.py` script includes a built-in test function. Inside your HP AI Studio jupyter workspace go to QuantumFinance folder and run the following command:
