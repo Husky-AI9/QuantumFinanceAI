@@ -352,7 +352,6 @@ class FinancialAnalyzerMLflowModel(mlflow.pyfunc.PythonModel):
                 if action == "news":
                     if company_name:
                         result_data = self.analyzer.news(str(company_name))
-                        print(result_data)
                     else:
                         result_data = "Company name required for news action."
                 elif action == "sentiment":
@@ -377,13 +376,11 @@ class FinancialAnalyzerMLflowModel(mlflow.pyfunc.PythonModel):
                         result_data = "Ticker (stock_name) and timeframe required for strategy action."
                 elif action == "dashboard":
                     result_data = self.analyzer.dashboard()
-                    print(result_data)
                 elif action == "assist":
                     result_data = self.analyzer.assist(str(question))
-                    print(result_data)
-
                 else:
                     result_data = f"Unknown action: {action}"
+                print(result_data)
             except Exception as e:
                 result_data = f"Error during action '{action}': {str(e)}"
             
@@ -456,8 +453,6 @@ def handle_analyzer_response(result: str | dict):
     if isinstance(result, str) and ("An error occurred" in result or "Invalid" in result.lower() or "Could not retrieve" in result):
         # More specific error codes could be mapped if desired
         raise HTTPException(status_code=400, detail=result)
-    if isinstance(result, dict) and "error" in result:
-        raise HTTPException(status_code=400, detail=result["error"])
     return result
 
 @app.post("/news", summary="Get concise news summary for a company")

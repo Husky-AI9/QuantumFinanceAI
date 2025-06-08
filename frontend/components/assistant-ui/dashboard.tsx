@@ -216,26 +216,8 @@ const NarrativeInfoPanel: FC<NarrativeInfoPanelProps> = ({ narrative, isOpen, on
                 <h4 className="text-lg font-semibold mb-1 text-foreground/90">Sonar API Insights</h4>
                 <p className="text-sm text-muted-foreground whitespace-pre-wrap">{narrative.details}</p>
                 </div>
-                <Button
-                    className="w-full mt-8 bg-primary text-primary-foreground hover:bg-primary/90"
-                    onClick={() => alert(`Placeholder: Navigate to Adaptive Alpha Streams for: ${narrative.title}`)}
-                >
-                Dive Deeper with Adaptive Alpha Streams 📈
-                </Button>
             </div>
         </ScrollArea>
-        {/* DialogClose can be used if you want an explicit X button styled by shadcn,
-            otherwise, clicking outside or pressing Esc usually closes the dialog.
-            If DialogContent doesn't have an explicit close button,
-            onOpenChange handles closure by clicking outside/Esc.
-        */}
-        {/* <DialogFooter className="px-6 pb-6">
-          <DialogClose asChild>
-            <Button type="button" variant="secondary">
-              Close
-            </Button>
-          </DialogClose>
-        </DialogFooter> */}
       </DialogContent>
     </Dialog>
   );

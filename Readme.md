@@ -31,7 +31,7 @@ Project Structure
 Steps for Judging and Testing
 -----------------------------
 
-Check out the project at : https://quantum-finance-ai.vercel.app/
+Check out the project at : https://quantum-finance-ai-deploy.vercel.app
 
 To get the Financial Sonar API up and running locally, follow these steps:
 
