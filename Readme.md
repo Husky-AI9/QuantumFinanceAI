@@ -68,7 +68,7 @@ python main.py log_mlflow_model
 You can test the API in a few ways:
 
 -   **Via the Frontend**: Use the web application to interact with each feature.
--   **Via Swagger UI**: Open URL that show in HP AI Studio Deployment in your browser to send requests directly to the API endpoints. Put the following command to test each feature:
+-   **Via Swagger UI**: Open URL that show in HP AI Studio Deployment in your browser to send requests directly to the API endpoints. Put the following command in the "Request body" to test each feature:
        
        Momentum Dashboard
        ~~~
